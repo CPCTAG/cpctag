@@ -1,0 +1,73 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsla(0, 33%, 64%, 0.715);
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #007bff;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+  }
+  
+  nav ul li {
+    font-size: 1.2em; /* Bigger font size */
+    font-weight: bold; /* Bold text */
+  }
+  
+  nav ul li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 8px; /* Rectangle shape with rounded corners */
+    transition: transform 0.1s, background-color 0.2s; /* Animation effect */
+  }
+  
+  /* Hover effect */
+  nav ul li a:hover {
+    background-color: hsl(212, 17%, 22%);
+  }
+  
+  /* Click (pop) effect */
+  nav ul li a:active {
+    transform: scale(0.95); /* Slightly shrink to create a pop effect */
+  }
+  
+  .page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid hsl(0, 18%, 40%);
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: hsl(15, 89%, 46%);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: hsl(24, 71%, 44%);
+  }
+  
