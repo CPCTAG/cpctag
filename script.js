@@ -1,10 +1,11 @@
-// Function to toggle between pages
 function showPage(pageId) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => {
-      page.style.display = page.id === pageId ? 'block' : 'none';
-    });
-  }
+  const pages = document.querySelectorAll(".page");
+  pages.forEach((page) => {
+    page.style.display = "none";
+  });
+  document.getElementById(pageId).style.display = "block";
+}
+
   
   // Tracking Form Submission
   document.getElementById("trackingForm").addEventListener("submit", function (e) {

@@ -1,73 +1,208 @@
-/* General Styling */
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: hsla(0, 33%, 64%, 0.715);
-    margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Navbar - Menu Toggle for Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
   }
-  
-  nav {
-    background-color: #007bff;
-    padding: 15px 0;
-    text-align: center;
+
+  .nav-links.active {
+      display: flex;
   }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between items */
+
+  .menu-toggle {
+      display: flex;
   }
-  
-  nav ul li {
-    font-size: 1.2em; /* Bigger font size */
-    font-weight: bold; /* Bold text */
-  }
-  
-  nav ul li a {
-    color: hsl(0, 0%, 100%);
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #0056b3;
-    border-radius: 8px; /* Rectangle shape with rounded corners */
-    transition: transform 0.1s, background-color 0.2s; /* Animation effect */
-  }
-  
-  /* Hover effect */
-  nav ul li a:hover {
-    background-color: hsl(212, 17%, 22%);
-  }
-  
-  /* Click (pop) effect */
-  nav ul li a:active {
-    transform: scale(0.95); /* Slightly shrink to create a pop effect */
-  }
-  
-  .page {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid hsl(0, 18%, 40%);
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: hsl(15, 89%, 46%);
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  button:hover {
-    background-color: hsl(24, 71%, 44%);
-  }
-  
+}
+
+/* Section Styling */
+section {
+  padding: 60px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+section h1 {
+  font-size: 2em;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #007bff;
+  padding: 15px;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styling */
+.page {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+form {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section Styling */
+.hero {
+  background-image: url('images/background_images/hero-bg.jpg'); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay effect */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background-color: hsl(24, 53%, 48%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #cc5200;
+}
